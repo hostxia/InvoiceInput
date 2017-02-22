@@ -44,6 +44,7 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.DataAccess.v16.2, Version=16.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.ExpressApp.Xpo.v16.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
@@ -63,6 +64,7 @@
     <Reference Include="DevExpress.Persistent.BaseImpl.v16.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v16.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -77,12 +79,44 @@
     <Reference Include="System.Drawing">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessObjects\InvoiceModelCode\ConnectionHelper.cs" />
+    <Compile Include="BusinessObjects\InvoiceModelCode\P_2012.cs" />
+    <Compile Include="BusinessObjects\InvoiceModelCode\P_2012.Designer.cs">
+      <DependentUpon>P_2012.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\InvoiceModelCode\P_2013.cs" />
+    <Compile Include="BusinessObjects\InvoiceModelCode\P_2013.Designer.cs">
+      <DependentUpon>P_2013.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\InvoiceModelCode\P_2014.cs" />
+    <Compile Include="BusinessObjects\InvoiceModelCode\P_2014.Designer.cs">
+      <DependentUpon>P_2014.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\InvoiceModelCode\P_2015.cs" />
+    <Compile Include="BusinessObjects\InvoiceModelCode\P_2015.Designer.cs">
+      <DependentUpon>P_2015.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\InvoiceModelCode\P_2016.cs" />
+    <Compile Include="BusinessObjects\InvoiceModelCode\P_2016.Designer.cs">
+      <DependentUpon>P_2016.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\InvoiceModelCode\P_2017.cs" />
+    <Compile Include="BusinessObjects\InvoiceModelCode\P_2017.Designer.cs">
+      <DependentUpon>P_2017.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\InvoiceModelCode\第三方账单.cs" />
+    <Compile Include="BusinessObjects\InvoiceModelCode\第三方账单.Designer.cs">
+      <DependentUpon>第三方账单.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseUpdate\Updater.cs" />
     <Compile Include="Module.cs">
       <SubType>Component</SubType>
@@ -98,8 +132,13 @@
       <SubType>Designer</SubType>
       <DependentUpon>Module.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="BusinessObjects\InvoiceModel.xpo" />
+    <None Include="BusinessObjects\InvoiceModel.xpo.diagram">
+      <DependentUpon>InvoiceModel.xpo</DependentUpon>
+    </None>
     <None Include="DatabaseUpdate\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +153,10 @@
   <ItemGroup>
     <None Include="FunctionalTests\sample.ets" />
     <None Include="Images\ReadMe.txt" />
+    <EmbeddedResource Include="Model.DesignedDiffs.Localization.zh-CHS.xafml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>

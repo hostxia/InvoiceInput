@@ -129,6 +129,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\MyViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\MRUStringEditor.cs" />
     <Compile Include="WinModule.cs">
       <SubType>Component</SubType>
     </Compile>

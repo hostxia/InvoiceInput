@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="a05fcb00-807d-4505-8d41-75a516cd4f03" dbName="Database" connectionInfo="77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxEZXZFeHByZXNzWHBvR2VuZXJhdG9yU2V0dGluZ3MgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM6eHNkPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgcHJvdmlkZXJLZXk9IiZsdDtDdXN0b20gY29ubmVjdGlvbiBzdHJpbmcmZ3Q7Ij4NCiAgPHBhcmFtZXRlcj4NCiAgICA8Q29ubmVjdGlvblBhZ2VTZXR0aW5nc0l0ZW0gbmFtZT0iJmx0O0N1c3RvbSBjb25uZWN0aW9uIHN0cmluZyZndDsiIHZhbHVlPSJYcG9Qcm92aWRlcj1NU0FjY2VzcztQcm92aWRlcj1NaWNyb3NvZnQuQUNFLk9MRURCLjEyLjA7TW9kZT1TaGFyZSBEZW55IE5vbmU7ZGF0YSBzb3VyY2U9RTpc5aSW5Luj55CG6LSm5Y2VLmFjY2RiO0pldCBPTEVEQjpEYXRhYmFzZSBQYXNzd29yZD07IiAvPg0KICA8L3BhcmFtZXRlcj4NCjwvRGV2RXhwcmVzc1hwb0dlbmVyYXRvclNldHRpbmdzPg==" namespace="InvoiceInput.Module.BusinessObjects.Database" connectionString="XpoProvider=MSAccess;Provider=Microsoft.ACE.OLEDB.12.0;Mode=Share Deny None;data source=E:\外代理账单.accdb;Jet OLEDB:Database Password=;" dataBaseShemaInfo="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" generateConnectionHelper="true" generateStoredProcedures="false" fieldNameCase="Unchanged" generateDefaultConstructors="false" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
+  <comments>
+    <dataBaseObjectModelHasComments Id="94dafd28-d654-45ba-ad8e-cec0a4b7fbe1">
+      <comment Id="fb6a5b51-cb2e-4d5d-96d2-e99f67f4c08d" text="The 'PrimaryKey' index is ignored, because 'ID' is a key;&#xD;&#xA;The 'ID' index is ignored, because 'ID' is a key" name="P_2017Comment">
+        <subjects>
+          <commentReferencesSubjects Id="9fb1dbec-7c7e-4afc-ac2b-db63e264e114">
+            <xpObjectMoniker Id="dcd835f6-e6c0-4755-b3d0-886e541fb23b" />
+          </commentReferencesSubjects>
+        </subjects>
+      </comment>
+    </dataBaseObjectModelHasComments>
+    <dataBaseObjectModelHasComments Id="f5e1d774-453c-462f-be80-412ec1874963">
+      <comment Id="f9198e15-a326-456d-a5e6-0ca9e045a292" text="The 'ID' index is ignored, because 'ID' is a key" name="P_2012Comment">
+        <subjects>
+          <commentReferencesSubjects Id="6838d8e0-6015-435b-a83a-6399fa3e1a26">
+            <xpObjectMoniker Id="bf4aecd9-ab25-4de3-b2cb-5633fc041d0f" />
+          </commentReferencesSubjects>
+        </subjects>
+      </comment>
+    </dataBaseObjectModelHasComments>
+    <dataBaseObjectModelHasComments Id="c173fad9-2367-48db-8489-3de5511089ab">
+      <comment Id="7e9512a5-ce17-4df9-bd8b-df6e4833edba" text="The 'ID' index is ignored, because 'ID' is a key" name="P_2013Comment">
+        <subjects>
+          <commentReferencesSubjects Id="c90ea072-a803-4f00-9212-9d07e73ba34b">
+            <xpObjectMoniker Id="3ad64bb0-2a75-4547-869f-4bc801d88e49" />
+          </commentReferencesSubjects>
+        </subjects>
+      </comment>
+    </dataBaseObjectModelHasComments>
+    <dataBaseObjectModelHasComments Id="80ed8b72-3e68-455f-88cc-b23ab3c364d2">
+      <comment Id="3c60f1d0-901b-4151-87cf-81d5e1e3223c" text="The 'ID' index is ignored, because 'ID' is a key" name="P_2014Comment">
+        <subjects>
+          <commentReferencesSubjects Id="cf459eb9-fff4-4e7b-ac58-84708207bd53">
+            <xpObjectMoniker Id="56ce371a-080f-40eb-b265-336db43eafc8" />
+          </commentReferencesSubjects>
+        </subjects>
+      </comment>
+    </dataBaseObjectModelHasComments>
+    <dataBaseObjectModelHasComments Id="3c3e8a85-34f1-4757-8f4c-dd5937646f4f">
+      <comment Id="5430250b-67e7-423a-abf2-1551fc52e3d8" text="The 'ID' index is ignored, because 'ID' is a key" name="P_2015Comment">
+        <subjects>
+          <commentReferencesSubjects Id="87aae2ed-b8d1-4527-bf28-c0f0a5a3ebc4">
+            <xpObjectMoniker Id="835615a9-46b9-4233-86f6-4cf9b6d48b07" />
+          </commentReferencesSubjects>
+        </subjects>
+      </comment>
+    </dataBaseObjectModelHasComments>
+    <dataBaseObjectModelHasComments Id="99d17ebc-6831-4efe-b0eb-3d8b4f3aac4f">
+      <comment Id="4e5907a4-b4ee-44f3-9ab2-29aa84ed7838" text="The 'PrimaryKey' index is ignored, because 'ID' is a key;&#xD;&#xA;The 'ID' index is ignored, because 'ID' is a key" name="P_2016Comment">
+        <subjects>
+          <commentReferencesSubjects Id="9abbda15-4a95-4aa8-939c-a42495e02fe0">
+            <xpObjectMoniker Id="6dbfd470-a64c-4d3f-a3ec-f48f8ca0fc53" />
+          </commentReferencesSubjects>
+        </subjects>
+      </comment>
+    </dataBaseObjectModelHasComments>
+    <dataBaseObjectModelHasComments Id="7c36f938-c726-4b5b-87df-2e20783401d4">
+      <comment Id="44590276-9ed5-42f2-8c74-9036190b88fe" text="The 'ID' index is ignored, because 'ID' is a key" name="第三方账单Comment">
+        <subjects>
+          <commentReferencesSubjects Id="e02b9f99-47d4-4830-a3d3-c69514c28edf">
+            <xpObjectMoniker Id="161e9af0-48d6-4750-a8fb-9d9750d8d7f8" />
+          </commentReferencesSubjects>
+        </subjects>
+      </comment>
+    </dataBaseObjectModelHasComments>
+  </comments>
+  <classes>
+    <dataBaseObjectModelHasClasses Id="ee86d901-f63a-489e-beb2-617542d46608">
+      <xpObject Id="dcd835f6-e6c0-4755-b3d0-886e541fb23b" name="P_2017" baseClass="XPLiteObject" userFileName="P_2017" designerFileName="P_2017.Designer" className="P_2017" virtualBaseClass="XPLiteObject" persistent="2017" virtualName="P_2017">
+        <fields>
+          <generalXpObjectHasFields Id="20cf7cb0-42da-4e60-ab37-bd355a55aed9">
+            <field Id="9279a458-1af6-4fc5-ae3d-40f6cc5930aa" name="ID" columnType="Int32" key="true" isIdentity="true" persistent="ID" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="bfa51e8e-c593-43b6-856f-4d117efd608b">
+            <field Id="3e47dfac-eff7-4ef7-9f1a-c8f35cfcb28c" name="备注" persistent="备注" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9f9f6cfa-983a-4fad-806d-679a5c1e26ef">
+            <field Id="b76da372-b635-4b1b-b150-57aabfd23e34" name="币种" persistent="币种" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="977bdd13-ef89-4f50-95ba-5241de8c1b9a">
+            <field Id="37b6651a-626f-45cd-91f3-9159f4a7bd2e" name="草单编号" persistent="草单编号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1dd67fe9-5b75-4a0c-aa35-afa46f8a9771">
+            <field Id="56bf3656-3030-4493-8316-d22208ed7349" name="代理费" columnType="Double" persistent="代理费" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9e73ce1d-6134-4b5f-ba90-4f75a6872fde">
+            <field Id="15525122-c572-4e7e-b977-8a0e741f5e69" name="翻译" columnType="Double" persistent="翻译" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="eb12b49d-9964-47c0-b155-6938aa8fb04b">
+            <field Id="6d8a4f74-7df6-4967-8aa3-b75b65d69ea8" name="服务费" columnType="Double" persistent="服务费" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1ad28e17-524d-402f-9b5e-5becb4ff50e8">
+            <field Id="e76fc7e2-1716-4b95-94da-e56278e86097" name="官费" columnType="Double" persistent="官费" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8110886d-1635-405b-9e8f-f31843d68e2b">
+            <field Id="83b8f7e2-d1c7-42f4-932a-6c90942aac8d" name="核准日" columnType="DateTime" persistent="核准日" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="357d59bd-28ef-4ace-99e8-167125d5ac11">
+            <field Id="26e84b0c-88dd-41f9-aca9-152ad431219d" name="记账日期" columnType="DateTime" persistent="记账日期" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e3313962-46fa-4235-8791-b5384573bc86">
+            <field Id="2602096f-4968-476f-9f95-482d718e6610" name="卷号" persistent="卷号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="0cfe6d01-6e0a-4480-8824-2c77adc79b99">
+            <field Id="c6960eeb-c546-46b5-8ec0-9182fe0a14c1" name="项目" persistent="项目" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="91f2615e-f021-46bc-94c7-95fd724651d4">
+            <field Id="7af92bd9-ac38-4c7b-a8e1-a4447da5d28c" name="小时数" columnType="Single" persistent="小时数" virtualColumnType="Single" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="939b5bcc-a220-465c-b035-bf0fd249c65a">
+            <field Id="c197252d-a594-4be4-9e27-a5476fd17b1c" name="杂费" columnType="Double" persistent="杂费" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="38f8db49-ed8a-4473-aed3-1d4daaac65fb">
+            <field Id="dce02fb4-a104-41fc-9594-0f8242e5338b" name="债方" persistent="债方" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="24f023b3-b58a-4d4b-a2a4-6a68c8db9784">
+            <field Id="44dc44b8-ae20-4355-9a04-b5ce36ad14e4" name="账单号" persistent="账单号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f58465c4-35b6-446a-9d63-4adf548588a1">
+            <field Id="0a49ef11-a1bd-4231-a22f-6190d2b02fe4" name="正式账单" persistent="正式账单" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7fef9bf2-4318-4f34-94ec-23e69c30c7f1">
+            <field Id="e5123f4d-bc66-4bb4-8d38-de04bfba250d" name="指定请款日" columnType="DateTime" persistent="指定请款日" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4a80fbf9-ed27-49c7-a5ae-7019bd2ad499">
+            <field Id="87e99387-3ee8-488a-b6cf-57c37d8c3f54" name="总计" columnType="Double" persistent="总计" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="9cf11547-f6b5-46b3-9945-ad52cf1c264c">
+      <xpObject Id="bf4aecd9-ab25-4de3-b2cb-5633fc041d0f" name="P_2012" baseClass="XPLiteObject" userFileName="P_2012" designerFileName="P_2012.Designer" className="P_2012" virtualBaseClass="XPLiteObject" persistent="2012" virtualName="P_2012">
+        <fields>
+          <generalXpObjectHasFields Id="76e9c99a-c73f-4f8e-9556-7f4919daabc2">
+            <field Id="d62ae229-3809-490f-a33e-46aee04f40af" name="ID" columnType="Int32" key="true" isIdentity="true" persistent="ID" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="eefbd656-df60-43fb-b6b2-1cd88a198882">
+            <field Id="5396ad01-7791-4bd9-b0e1-4cbd7c38e9b4" name="备注" persistent="备注" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b0f12bb0-498a-4722-8ce5-982a3ddfc8d3">
+            <field Id="6d12e500-b6c3-4544-9a85-cc7f0ad39c91" name="币种" persistent="币种" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="111eea4d-b335-45b2-8605-7d94743617ef">
+            <field Id="9a72552a-36e6-4cca-9945-efa376db03af" name="草单编号" persistent="草单编号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="eb5766f9-6070-4d9c-833d-33471379aee4">
+            <field Id="c964fe29-dff3-4720-a5c8-7db94bf27c22" name="代理费" columnType="Decimal" persistent="代理费" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f668ada2-e0df-464f-a2ce-8ef515565c5f">
+            <field Id="966ca65a-17b0-44d9-8abc-b0cf23bb711b" name="翻译" columnType="Decimal" persistent="翻译" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1259842a-b580-4912-87ec-90e5bd8ebf60">
+            <field Id="84d13363-3533-46dd-b4e5-489040076d19" name="官费" columnType="Decimal" persistent="官费" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a5b25da0-a436-401a-b219-09340545451b">
+            <field Id="435c5bb2-b400-4f68-8339-12237b33b12a" name="核准日" columnType="DateTime" persistent="核准日" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="31945d35-d2c6-4378-b990-2fc416718c1f">
+            <field Id="b40be6d7-9d8a-4f1b-9028-5210a2c4e473" name="记账日期" columnType="DateTime" persistent="记账日期" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2921fd71-3a5d-43a5-8289-cb696eead6ae">
+            <field Id="aaa0081b-9c55-47ad-b19b-ff86cb6c49c6" name="卷号" persistent="卷号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3e131dbb-60a2-4ba8-9152-7d755ce80649">
+            <field Id="43b660b0-1ecd-42c8-9b7a-6979f2430dd8" name="项目" persistent="项目" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ce68099b-96cc-4296-b1f8-154371400cbd">
+            <field Id="8d1e6a3e-fbbf-4e45-b6f3-73e373a6a25f" name="杂费" columnType="Decimal" persistent="杂费" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7cc00837-01c9-4bef-972a-27f8c8f61d2f">
+            <field Id="b33fa2de-3ed5-4dbd-bb07-dfc5f61d1e51" name="债方" persistent="债方" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="70bf7fab-038b-4b2a-8c2a-e82add707a98">
+            <field Id="87e9897a-dbd0-48f9-be91-0ce541428331" name="账单号" persistent="账单号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b7c42854-caa8-4908-a02c-78070599d1d8">
+            <field Id="8de5495c-98d1-47e1-b220-c7fd8b68ffa2" name="正式账单" persistent="正式账单" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="adc6e558-8669-4580-9bc5-431177e46e9e">
+            <field Id="b3ae3579-a622-4c76-81ab-820d2705010e" name="总计" columnType="Decimal" persistent="总计" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="cea4ad61-ec80-457a-8f5f-b60ab7696059">
+      <xpObject Id="3ad64bb0-2a75-4547-869f-4bc801d88e49" name="P_2013" baseClass="XPLiteObject" userFileName="P_2013" designerFileName="P_2013.Designer" className="P_2013" virtualBaseClass="XPLiteObject" persistent="2013" virtualName="P_2013">
+        <fields>
+          <generalXpObjectHasFields Id="a014be8c-6526-4645-9ef0-2a894f596c5c">
+            <field Id="b52017d6-6d36-4fa5-9b4f-0a5a713a8154" name="ID" columnType="Int32" key="true" isIdentity="true" persistent="ID" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8b37a17e-b31c-4157-8773-6d519f0da1f5">
+            <field Id="e1335343-b83b-4d57-9759-757aecda59dc" name="备注" persistent="备注" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b17937d3-7807-424e-9e45-430d24a93448">
+            <field Id="0563442f-f4ae-4007-a5ed-1d3e258efce0" name="币种" persistent="币种" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7fa2bac1-86be-44b9-a714-15ee3d62f3d3">
+            <field Id="126d8a17-d2c7-4b07-9675-637537cb57b2" name="草单编号" persistent="草单编号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="72157cc4-64f0-4881-a403-a3ed7b0107e8">
+            <field Id="06eb01f2-5952-451b-b11d-ed19c88e2abb" name="代理费" columnType="Decimal" persistent="代理费" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f01358a1-fc8a-49bb-99a1-0405c0e58e40">
+            <field Id="76836b33-626a-4b20-aa98-149b35cba4d1" name="翻译" columnType="Decimal" persistent="翻译" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="75813e50-561d-44e0-b6c8-c767dbbac0ff">
+            <field Id="c40d5bd5-1d61-4130-88d9-3cc08861646f" name="官费" columnType="Decimal" persistent="官费" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e7ebfe53-e4b7-41d6-8413-1428d3c44c93">
+            <field Id="7b612f4c-eaa6-47b5-9be5-037b40de5b80" name="核准日" columnType="DateTime" persistent="核准日" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="0512c8bc-baf5-4269-a4ab-a4436242f17c">
+            <field Id="ea85166a-d899-4a80-a1b4-5157504acb90" name="记账日期" columnType="DateTime" persistent="记账日期" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f7a4b0b6-54de-431a-95c8-736149a78165">
+            <field Id="016dfe2f-676d-4f29-8327-6aa75cc9eb43" name="卷号" persistent="卷号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="fbabb4fd-cee0-4f84-8feb-a664db72e375">
+            <field Id="bcaa6b91-1af7-4a63-be73-9dc8658d9de5" name="项目" persistent="项目" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c8897a7b-9617-4ebd-ab07-0f16885b7533">
+            <field Id="e75706fc-8379-406f-b0b4-fb6c572ab5d5" name="杂费" columnType="Decimal" persistent="杂费" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="835236cb-cd3b-4232-aaac-20d1516cc5cd">
+            <field Id="704d0470-21b9-4c0d-946e-391d435cb209" name="债方" persistent="债方" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="db4c675b-e46b-4221-a1f0-53c95d77156c">
+            <field Id="0c150ea2-240d-4c93-bf0b-71d66c90d80b" name="账单号" persistent="账单号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="68188e6b-1bc5-41e1-a1f3-7dc3086f49d9">
+            <field Id="1414c84f-98c8-460e-b64a-287eaff525db" name="正式账单" persistent="正式账单" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="21240e87-36bf-4d41-a959-27b3f271d427">
+            <field Id="f18bee49-6f61-44d3-b2b3-6ea3e1a05d37" name="总计" columnType="Decimal" persistent="总计" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="9218de2b-a58e-429b-b28d-c6eae62b2a2b">
+      <xpObject Id="56ce371a-080f-40eb-b265-336db43eafc8" name="P_2014" baseClass="XPLiteObject" userFileName="P_2014" designerFileName="P_2014.Designer" className="P_2014" virtualBaseClass="XPLiteObject" persistent="2014" virtualName="P_2014">
+        <fields>
+          <generalXpObjectHasFields Id="2b95fb68-70c5-4c98-a0b0-7a49ee3e3ae2">
+            <field Id="fae70009-5483-40c6-a47c-3d05d6da3c53" name="ID" columnType="Int32" key="true" isIdentity="true" persistent="ID" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="16932bad-34c8-45de-8987-aef4260bdc7c">
+            <field Id="f4a9c0c9-7d11-4b6e-83ff-9f1a205c885e" name="备注" persistent="备注" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4db6feb3-c6b2-4696-b7c9-f8a86b6b972b">
+            <field Id="eae33880-a984-4384-8cd2-f1271571f7dd" name="币种" persistent="币种" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c1b57e3a-311c-492c-b6f7-f7afd734f575">
+            <field Id="76a6c0aa-ae2e-4fb9-9088-0f5fb0297a42" name="草单编号" persistent="草单编号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="458f8128-ddbc-48ba-b2c5-ff8ffa5f5525">
+            <field Id="d96512cd-1e58-4be2-a505-d987cc4fa008" name="代理费" columnType="Decimal" persistent="代理费" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ff778c5f-870f-41ce-8806-c625e0952109">
+            <field Id="6608aa79-b4c9-480d-ac5c-411d4d0dbdc2" name="翻译" columnType="Decimal" persistent="翻译" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ba05c4b3-f29e-44e4-9eab-18508bcbc9b1">
+            <field Id="91d15de7-e9f9-4ed7-82b0-a2fe6689ad49" name="官费" columnType="Decimal" persistent="官费" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b404446a-6d16-464f-b574-6fc9b50b39b0">
+            <field Id="2e5f48d1-2e6d-4ac2-8a28-9e27fe2eefcf" name="核准日" columnType="DateTime" persistent="核准日" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="fd476e68-7d2b-4b8f-ad21-e398fbd13fdc">
+            <field Id="66706f42-075c-4adb-9993-019c6c888cb9" name="记账日期" columnType="DateTime" persistent="记账日期" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8448d3b4-246e-4082-b213-03f02b9c8104">
+            <field Id="c0e48857-2297-4314-a66d-826765eff8ae" name="卷号" persistent="卷号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="39bb9275-3f90-471b-92b8-dc5208bdb14f">
+            <field Id="8741e462-12ac-4e70-818d-bc29198f3f41" name="项目" persistent="项目" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="45208307-d484-4f70-a0b8-f87b2762be6b">
+            <field Id="823d0d0b-80f6-4a85-b68f-c350840d3965" name="杂费" columnType="Decimal" persistent="杂费" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="21a79890-1ca5-49b6-b5b8-8092983d5e19">
+            <field Id="de1040d2-0550-4b50-ba67-12f18d96b19a" name="债方" persistent="债方" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f9534f83-eaf1-4e52-8f55-8397f163fdb6">
+            <field Id="11580607-24fd-493f-9320-ed4b269c5acc" name="账单号" persistent="账单号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="0219de7c-7bdb-4caf-9b77-8975dd380eb4">
+            <field Id="e36bacf3-8d2d-4936-ba40-5340c6af7065" name="正式账单" persistent="正式账单" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="213cc477-b76d-43be-b3d6-4383048e2feb">
+            <field Id="9cf34cc1-4526-496b-a25e-3fa1c867816a" name="总计" columnType="Decimal" persistent="总计" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="2cef9864-2523-4ec3-95d8-01f6fd95ab4b">
+      <xpObject Id="835615a9-46b9-4233-86f6-4cf9b6d48b07" name="P_2015" baseClass="XPLiteObject" userFileName="P_2015" designerFileName="P_2015.Designer" className="P_2015" virtualBaseClass="XPLiteObject" persistent="2015" virtualName="P_2015">
+        <fields>
+          <generalXpObjectHasFields Id="371bd0bb-6dfc-4ed3-9f74-0ea7c850f8ef">
+            <field Id="45286c17-9e2f-4c3c-8210-cdd0c8d4f5e2" name="ID" columnType="Int32" key="true" isIdentity="true" persistent="ID" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="09993d33-4568-496d-81a5-359eb3826bd7">
+            <field Id="1c20a7bf-c614-46b6-84b5-d41dbf00e29f" name="备注" persistent="备注" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ab564b29-3505-4790-b874-f3a96945c192">
+            <field Id="9eaffe08-28b3-4472-9c62-325c2460bbfd" name="币种" persistent="币种" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c3155594-a751-4053-b541-858e342ebe59">
+            <field Id="5a9b25c7-4904-4bc4-9c4b-080122515fc5" name="草单编号" persistent="草单编号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="34a102a7-50da-4c41-8d97-ce47977280bd">
+            <field Id="229411eb-dfa4-40f5-9e89-9a34e49fbfb3" name="代理费" columnType="Decimal" persistent="代理费" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6c0e54d5-f10a-466f-9cb2-b6a65624b8fe">
+            <field Id="9f777369-605b-454c-8bfa-2a98309a96bb" name="翻译" columnType="Decimal" persistent="翻译" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d9d5f29b-b85f-4656-8dd2-0ed69dd82cb4">
+            <field Id="7fe589fa-f230-4b62-a702-437e030ce420" name="官费" columnType="Decimal" persistent="官费" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7276c945-a253-4e36-8a87-aec1c91e06d4">
+            <field Id="93e04763-90ce-446a-a225-ddc20fdbb906" name="核准日" columnType="DateTime" persistent="核准日" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="dbd0a673-42a2-4ad7-b5f7-adbfbd17a3f7">
+            <field Id="fe9cb501-a9f0-48d6-a557-92a7ff9aa88c" name="记账日期" columnType="DateTime" persistent="记账日期" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="56719c9c-dfb4-4165-994c-df80f9f9a39f">
+            <field Id="b9f7b8c7-6553-4b88-9700-21f3b5f017f8" name="卷号" persistent="卷号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="253e28c2-88b6-4876-b548-57a452af42fe">
+            <field Id="c5499ba1-e35f-4f31-b22b-cf63a4356f2f" name="项目" persistent="项目" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7292dc60-55b5-4447-b463-8cce2e5f032e">
+            <field Id="4570f659-2bf4-4428-9c15-14910a27488c" name="杂费" columnType="Decimal" persistent="杂费" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="225ecdec-3f98-468d-9307-322de6af5beb">
+            <field Id="ec364663-5f9b-41cc-905f-9cca8007c1a3" name="债方" persistent="债方" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ff188d91-74cc-468d-8cda-e98f3b580380">
+            <field Id="c64ba83b-4f26-4d2d-b9f1-52fdf412b21d" name="账单号" persistent="账单号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="727ef220-4029-4908-aa70-d37be3ea8848">
+            <field Id="ebdc3faf-d299-4fdb-a134-ff4864d9ef17" name="正式账单" persistent="正式账单" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="db0e8c7a-cb8e-438a-bb1f-abd85e8c03aa">
+            <field Id="44d77b21-dee5-41f5-8e81-cb8302784e84" name="总计" columnType="Decimal" persistent="总计" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="6282b377-cf8c-4557-b5ff-08a788f213ce">
+      <xpObject Id="6dbfd470-a64c-4d3f-a3ec-f48f8ca0fc53" name="P_2016" baseClass="XPLiteObject" userFileName="P_2016" designerFileName="P_2016.Designer" className="P_2016" virtualBaseClass="XPLiteObject" persistent="2016" virtualName="P_2016">
+        <fields>
+          <generalXpObjectHasFields Id="ec6c7a9f-660c-4bae-b8fd-3aa4c2a944d7">
+            <field Id="85537685-dcb8-44f5-a6b1-fb7cf2d12f39" name="ID" columnType="Int32" key="true" isIdentity="true" persistent="ID" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="27c752dd-6fc9-4ff7-9328-a990fef59610">
+            <field Id="b729eb03-d312-4273-8d56-7723ba69ac81" name="备注" persistent="备注" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="776e3511-4adf-4401-a50e-4676c87aac15">
+            <field Id="a6432f30-8e8d-4d36-8405-64d908b51996" name="币种" persistent="币种" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="fe38d356-e3fc-4dd3-91d7-5b77abe54d73">
+            <field Id="5fa1dc1c-7743-475e-b91d-bd1edc5a29f8" name="草单编号" persistent="草单编号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="cd83cef7-c8ca-4fc7-a487-f30b1237a66a">
+            <field Id="64c8220e-e128-428e-8560-3fbccaeb3da2" name="代理费" columnType="Double" persistent="代理费" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6e8cb692-06c2-441d-9e39-9a1a4b9db1d3">
+            <field Id="a0054c53-ae34-4ece-9e0a-9160879e857e" name="翻译" columnType="Double" persistent="翻译" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="303756a5-726b-468a-83f6-4e64e86a3233">
+            <field Id="5b05f6f4-045d-4c70-8134-833ee4adf7ae" name="官费" columnType="Double" persistent="官费" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a61820ba-5738-482c-b80c-2089dcbbf15d">
+            <field Id="49c273c3-92da-4944-ad3f-dab32fc177b2" name="核准日" columnType="DateTime" persistent="核准日" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f0a8e444-db10-4553-9a9e-018a7a6970d2">
+            <field Id="a48b21bf-c338-4069-b554-f7e3a41aeb25" name="记账日期" columnType="DateTime" persistent="记账日期" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e9741173-fe07-44e3-877b-3b19ac722369">
+            <field Id="f9cf2a4e-5745-40a6-9c91-99d6a7da5ddf" name="卷号" persistent="卷号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="5a5aecc7-23e7-4c4f-934c-3bee2a1a918a">
+            <field Id="1847fe8d-8d63-4d18-a708-47c156811c24" name="项目" persistent="项目" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="88166adf-727f-4a6e-bebf-2b4601eaa273">
+            <field Id="d58b02b3-9b1e-4f62-bc90-247f08bdc6a2" name="杂费" columnType="Double" persistent="杂费" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d0b70f97-100f-4aba-a8d8-d607dc18e6dc">
+            <field Id="302db83b-ca0c-4f74-b3e9-e59c8c41d9d5" name="债方" persistent="债方" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ea841482-6a64-4b46-95d3-4a446a5a9bbb">
+            <field Id="7eaf8033-2886-4ebf-91ab-4f02c9167e49" name="账单号" persistent="账单号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="415ce263-8945-48a5-ac51-64de303fd9b6">
+            <field Id="f24d93ea-81e7-4854-99f9-6a73cfbffd4d" name="正式账单" persistent="正式账单" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4d399970-1092-42b5-813d-3a9f334cfe7f">
+            <field Id="60ec0777-e192-460e-a539-8e09236eea39" name="指定请款日" columnType="DateTime" persistent="指定请款日" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e43b67c4-8069-4262-bd90-c92e65555b60">
+            <field Id="6618bce4-8c69-45cd-b3d3-1d7fe0ab4e53" name="总计" columnType="Double" persistent="总计" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="560b0ece-92fb-451a-b2c7-84582b28bf78">
+      <xpObject Id="161e9af0-48d6-4750-a8fb-9d9750d8d7f8" name="第三方账单" baseClass="XPLiteObject" userFileName="第三方账单" designerFileName="第三方账单.Designer" className="第三方账单" virtualBaseClass="XPLiteObject" persistent="第三方账单" virtualName="第三方账单">
+        <fields>
+          <generalXpObjectHasFields Id="48f2e779-d257-469f-a3ab-ca64da791352">
+            <field Id="2a58b0c4-64e6-4da3-a4d4-bbfd4661c478" name="ID" columnType="Int32" key="true" isIdentity="true" persistent="ID" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1dbd8858-568c-4816-9f3d-9f8e8ed174ff">
+            <field Id="93015a57-c328-4a8f-ae70-0922a5ff2515" name="备注" persistent="备注" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="533150fb-2678-46f1-88a6-92d8d7498870">
+            <field Id="075f3f54-17a5-4c82-8c8d-a81f4e65d575" name="币种" persistent="币种" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e9243d4d-a211-4826-a16d-7363a587a262">
+            <field Id="8881d827-21d4-48b8-bb4b-6c744740531b" name="草单编号" persistent="草单编号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="bde30523-46a2-4da5-a4d5-16800987c1c5">
+            <field Id="797dbb8b-6489-4ed4-bca4-834e01053e7f" name="代理费" columnType="Double" persistent="代理费" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="cfcca0b7-5956-4b80-b611-8a288f421b35">
+            <field Id="377bf84c-b29c-4b47-a8ed-736badab1a4c" name="翻译费" columnType="Double" persistent="翻译费" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e1110871-ad54-43c8-a523-4452ba708ad8">
+            <field Id="9f8100d4-b6ad-4f01-9a73-001b084d4332" name="官费" columnType="Double" persistent="官费" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d05404f0-cae3-4783-ba02-520ec6edec7b">
+            <field Id="c7712071-5513-470e-995b-0e681db0befd" name="核准日" columnType="DateTime" persistent="核准日" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ddb8c4c1-59c4-4e21-84af-0f7e5d04fc06">
+            <field Id="968c2e0c-ab8a-4ab3-b94a-cee3f8d7b3fb" name="记账日期" columnType="DateTime" persistent="记账日期" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7fa0fee7-591f-4058-9837-6634afa073a3">
+            <field Id="c06f7b51-f47f-4ef3-ae60-cf3e8805809c" name="卷号" persistent="卷号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3eb73f55-7c23-4390-b769-47373cee04cc">
+            <field Id="7a62c60f-f548-4751-9803-f7ceba7aaa27" name="项目" persistent="项目" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="bec81f25-e68f-4465-87e4-d688eefebf4d">
+            <field Id="01204c2f-a743-4274-b596-9b9b8986ac3e" name="杂费" columnType="Double" persistent="杂费" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d94d98fc-9b85-43d0-a47a-4ccc59a6e792">
+            <field Id="a1a7080d-a198-4158-9430-171046064f8c" name="债方" persistent="债方" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6627c0d2-eaef-4a4b-a15d-6c6017150bee">
+            <field Id="063a2506-a6e2-4e50-b16c-c3ec3abaa779" name="账单号" persistent="账单号" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1f0b37aa-586c-42ae-89b5-eda5b5d3213b">
+            <field Id="0cc820c1-0952-48f0-ba75-37fdcebb09da" name="正式账单" persistent="正式账单" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="11e6bbe5-15f7-487a-80b9-84ebf0c2d237">
+            <field Id="f4f30093-c1f6-4530-a76f-a3fc20f775b7" name="字段20" persistent="字段20" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="255" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="523a34b6-8e45-4c18-aef9-092419209487">
+            <field Id="5620cb85-47c8-464c-8ad8-c1505971e645" name="总计" columnType="Double" persistent="总计" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+  </classes>
+</dataBaseObjectModel>

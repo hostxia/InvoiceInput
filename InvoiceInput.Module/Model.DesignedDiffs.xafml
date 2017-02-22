@@ -1,5 +1,520 @@
-﻿<?xml version="1.0" ?>
-<Application Title="InvoiceInput">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="InvoiceInput" Logo="BO_Contract" ProtectedContentText="******">
+  <BOModel>
+    <Class Name="InvoiceInput.Module.BusinessObjects.Database.P_2012" Caption="2012">
+      <OwnMembers>
+        <Member Name="代理费" DisplayFormat="{0:n2}" EditMask="n2" />
+        <Member Name="翻译" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="官费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="杂费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="总计" EditMask="n2" DisplayFormat="{0:n2}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="InvoiceInput.Module.BusinessObjects.Database.P_2013" Caption="2013">
+      <OwnMembers>
+        <Member Name="代理费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="翻译" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="官费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="杂费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="总计" EditMask="n2" DisplayFormat="{0:n2}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="InvoiceInput.Module.BusinessObjects.Database.P_2014" Caption="2014">
+      <OwnMembers>
+        <Member Name="代理费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="翻译" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="官费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="杂费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="总计" EditMask="n2" DisplayFormat="{0:n2}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="InvoiceInput.Module.BusinessObjects.Database.P_2015" Caption="2015">
+      <OwnMembers>
+        <Member Name="代理费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="翻译" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="官费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="杂费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="总计" EditMask="n2" DisplayFormat="{0:n2}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="InvoiceInput.Module.BusinessObjects.Database.P_2016" Caption="2016">
+      <OwnMembers>
+        <Member Name="代理费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="翻译" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="官费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="杂费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="总计" EditMask="n2" DisplayFormat="{0:n2}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="InvoiceInput.Module.BusinessObjects.Database.P_2017" Caption="2017">
+      <OwnMembers>
+        <Member Name="代理费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="翻译" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="服务费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="官费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="小时数" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="杂费" EditMask="n2" DisplayFormat="{0:n2}" />
+        <Member Name="总计" EditMask="n2" DisplayFormat="{0:n2}" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <NavigationItems DefaultChildItemsDisplayStyle="List" NavigationStyle="TreeList">
+    <Items>
+      <Item Id="Default" Removed="True">
+        <Items>
+          <Item Id="P_2012_ListView" Removed="True" />
+          <Item Id="P_2013_ListView" Removed="True" />
+          <Item Id="P_2014_ListView" Removed="True" />
+          <Item Id="P_2015_ListView" Removed="True" />
+          <Item Id="P_2016_ListView" Removed="True" />
+          <Item Id="P_2017_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="P_2012_ListView" ViewId="P_2012_ListView" ObjectKey="" IsNewNode="True" />
+      <Item Id="P_2013_ListView" ViewId="P_2013_ListView" ObjectKey="" IsNewNode="True" />
+      <Item Id="P_2014_ListView" ViewId="P_2014_ListView" ObjectKey="" IsNewNode="True" />
+      <Item Id="P_2015_ListView" ViewId="P_2015_ListView" ObjectKey="" IsNewNode="True" />
+      <Item Id="P_2016_ListView" ViewId="P_2016_ListView" ObjectKey="" IsNewNode="True" />
+      <Item Id="P_2017_ListView" ViewId="P_2017_ListView" ObjectKey="" IsNewNode="True" />
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="16.2.3.0" IsNewNode="True" />
+  </SchemaModules>
   <Views>
+    <DetailView Id="P_2012_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="P_2012" RelativeSize="100">
+              <LayoutGroup Id="P_2012_col1" RelativeSize="50">
+                <LayoutItem Id="ID" RelativeSize="5.8181818181818183" />
+                <LayoutItem Id="记账日期" ViewItem="记账日期" Index="1" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="账单号" ViewItem="账单号" Index="2" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="卷号" ViewItem="卷号" Index="3" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="债方" ViewItem="债方" Index="4" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="项目" ViewItem="项目" Index="5" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="币种" Index="6" RelativeSize="4.3636363636363633" />
+                <LayoutItem Id="官费" ViewItem="官费" Index="7" RelativeSize="68" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="备注" Index="8" RelativeSize="63.636363636363633" Removed="True" />
+                <LayoutItem Id="草单编号" Index="8" RelativeSize="4.3636363636363633" Removed="True" />
+                <LayoutItem Id="代理费" Index="8" RelativeSize="4.3636363636363633" Removed="True" />
+                <LayoutItem Id="翻译" Index="8" RelativeSize="4.3636363636363633" Removed="True" />
+                <LayoutItem Id="核准日" Index="8" RelativeSize="63.636363636363633" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="P_2012_col2" RelativeSize="50">
+                <LayoutItem Id="代理费" ViewItem="代理费" Index="0" RelativeSize="5.8181818181818183" IsNewNode="True" />
+                <LayoutItem Id="项目" RelativeSize="5.8181818181818183" Index="0" Removed="True" />
+                <LayoutItem Id="债方" ViewItem="债方" Index="0" RelativeSize="5.8181818181818183" Removed="True" />
+                <LayoutItem Id="翻译" ViewItem="翻译" Index="1" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="杂费" RelativeSize="4.3636363636363633" Index="2" />
+                <LayoutItem Id="总计" RelativeSize="4.3636363636363633" Index="3" />
+                <LayoutItem Id="草单编号" ViewItem="草单编号" Index="4" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="账单号" RelativeSize="4.3636363636363633" Index="4" Removed="True" />
+                <LayoutItem Id="正式账单" RelativeSize="4.3636363636363633" Index="5" />
+                <LayoutItem Id="核准日" ViewItem="核准日" Index="6" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="备注" ViewItem="备注" Index="7" RelativeSize="68" IsNewNode="True" />
+                <LayoutItem Id="记账日期" RelativeSize="5.8181818181818183" Removed="True" />
+                <LayoutItem Id="卷号" RelativeSize="4.3636363636363633" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="P_2012_ListView">
+      <Columns>
+        <ColumnInfo Id="备注" Index="-1" />
+        <ColumnInfo Id="代理费" Index="-1" />
+        <ColumnInfo Id="翻译" Index="-1" />
+        <ColumnInfo Id="官费" Index="-1" />
+        <ColumnInfo Id="杂费" Index="-1" />
+        <ColumnInfo Id="记账日期" Index="0" />
+        <ColumnInfo Id="账单号" Index="1" />
+        <ColumnInfo Id="债方" Index="2" />
+        <ColumnInfo Id="卷号" Index="3" />
+        <ColumnInfo Id="项目" Index="4" />
+        <ColumnInfo Id="总计" Index="5" />
+        <ColumnInfo Id="币种" Index="6" />
+        <ColumnInfo Id="草单编号" Index="7" />
+        <ColumnInfo Id="核准日" Index="8" />
+        <ColumnInfo Id="正式账单" Index="9" />
+      </Columns>
+    </ListView>
+    <DetailView Id="P_2013_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="P_2013" RelativeSize="100">
+              <LayoutGroup Id="P_2013_col1" RelativeSize="50">
+                <LayoutItem Id="ID" RelativeSize="5.8181818181818183" />
+                <LayoutItem Id="记账日期" ViewItem="记账日期" Index="1" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="备注" Index="2" RelativeSize="4.3636363636363633" Removed="True" />
+                <LayoutItem Id="账单号" ViewItem="账单号" Index="2" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="卷号" ViewItem="卷号" Index="3" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="债方" ViewItem="债方" Index="4" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="项目" ViewItem="项目" Index="5" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="币种" Index="6" RelativeSize="4.3636363636363633" />
+                <LayoutItem Id="官费" ViewItem="官费" Index="7" RelativeSize="68" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="草单编号" Index="8" RelativeSize="4.3636363636363633" Removed="True" />
+                <LayoutItem Id="代理费" Index="8" RelativeSize="4.3636363636363633" Removed="True" />
+                <LayoutItem Id="翻译" Index="8" RelativeSize="4.3636363636363633" Removed="True" />
+                <LayoutItem Id="核准日" Index="8" RelativeSize="63.636363636363633" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="P_2013_col2" RelativeSize="50">
+                <LayoutItem Id="代理费" ViewItem="代理费" Index="0" RelativeSize="5.8181818181818183" IsNewNode="True" />
+                <LayoutItem Id="项目" ViewItem="项目" Index="0" RelativeSize="5.8181818181818183" Removed="True" />
+                <LayoutItem Id="债方" RelativeSize="5.8181818181818183" Index="0" Removed="True" />
+                <LayoutItem Id="翻译" ViewItem="翻译" Index="1" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="卷号" RelativeSize="4.3636363636363633" Index="2" Removed="True" />
+                <LayoutItem Id="杂费" RelativeSize="4.3636363636363633" Index="2" />
+                <LayoutItem Id="总计" Index="3" RelativeSize="4.3636363636363633" />
+                <LayoutItem Id="草单编号" ViewItem="草单编号" Index="4" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="正式账单" Index="5" RelativeSize="4.3636363636363633" />
+                <LayoutItem Id="核准日" ViewItem="核准日" Index="6" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="备注" ViewItem="备注" Index="7" RelativeSize="68" IsNewNode="True" />
+                <LayoutItem Id="记账日期" RelativeSize="5.8181818181818183" Removed="True" />
+                <LayoutItem Id="账单号" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="P_2013_ListView">
+      <Columns>
+        <ColumnInfo Id="备注" Index="-1" />
+        <ColumnInfo Id="代理费" Index="-1" />
+        <ColumnInfo Id="翻译" Index="-1" />
+        <ColumnInfo Id="官费" Index="-1" />
+        <ColumnInfo Id="杂费" Index="-1" />
+        <ColumnInfo Id="记账日期" Index="0" />
+        <ColumnInfo Id="账单号" Index="1" />
+        <ColumnInfo Id="债方" Index="2" />
+        <ColumnInfo Id="卷号" Index="3" />
+        <ColumnInfo Id="项目" Index="4" />
+        <ColumnInfo Id="总计" Index="5" />
+        <ColumnInfo Id="币种" Index="6" />
+        <ColumnInfo Id="草单编号" Index="7" />
+        <ColumnInfo Id="核准日" Index="8" />
+        <ColumnInfo Id="正式账单" Index="9" />
+      </Columns>
+    </ListView>
+    <DetailView Id="P_2014_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="P_2014" RelativeSize="100" Index="0">
+              <LayoutGroup Id="P_2014_col1" RelativeSize="50">
+                <LayoutItem Id="ID" ViewItem="ID" Index="0" RelativeSize="5.8181818181818183" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="记账日期" ViewItem="记账日期" Index="1" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="账单号" ViewItem="账单号" Index="2" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="卷号" ViewItem="卷号" Index="3" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="债方" ViewItem="债方" Index="4" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="项目" ViewItem="项目" Index="5" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="币种" Index="6" RelativeSize="4.3636363636363633" />
+                <LayoutItem Id="草单编号" Index="6" RelativeSize="4.5627376425855513" Removed="True" />
+                <LayoutItem Id="核准日" Index="6" RelativeSize="71.102661596958171" Removed="True" />
+                <LayoutItem Id="代理费" Index="7" RelativeSize="4.5627376425855513" Removed="True" />
+                <LayoutItem Id="翻译" Index="7" RelativeSize="66.539923954372625" Removed="True" />
+                <LayoutItem Id="官费" ViewItem="官费" Index="7" RelativeSize="68" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="备注" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="P_2014_col2" RelativeSize="50">
+                <LayoutItem Id="代理费" ViewItem="代理费" Index="0" RelativeSize="5.8181818181818183" IsNewNode="True" />
+                <LayoutItem Id="记账日期" RelativeSize="6.083650190114068" Index="0" Removed="True" />
+                <LayoutItem Id="项目" ViewItem="项目" Index="0" RelativeSize="6.083650190114068" Removed="True" />
+                <LayoutItem Id="债方" RelativeSize="6.083650190114068" Index="0" Removed="True" />
+                <LayoutItem Id="翻译" ViewItem="翻译" Index="1" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="卷号" RelativeSize="4.3636363636363633" Index="2" Removed="True" />
+                <LayoutItem Id="杂费" RelativeSize="4.3636363636363633" Index="2" />
+                <LayoutItem Id="总计" RelativeSize="4.3636363636363633" Index="3" />
+                <LayoutItem Id="草单编号" ViewItem="草单编号" Index="4" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="正式账单" RelativeSize="4.3636363636363633" Index="5" />
+                <LayoutItem Id="核准日" ViewItem="核准日" Index="6" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="备注" ViewItem="备注" Index="7" RelativeSize="68" IsNewNode="True" />
+                <LayoutItem Id="账单号" RelativeSize="4.3636363636363633" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="P_2014_ListView">
+      <Columns>
+        <ColumnInfo Id="备注" Index="-1" />
+        <ColumnInfo Id="代理费" Index="-1" />
+        <ColumnInfo Id="翻译" Index="-1" />
+        <ColumnInfo Id="官费" Index="-1" />
+        <ColumnInfo Id="杂费" Index="-1" />
+        <ColumnInfo Id="记账日期" Index="0" />
+        <ColumnInfo Id="账单号" Index="1" />
+        <ColumnInfo Id="债方" Index="2" />
+        <ColumnInfo Id="卷号" Index="3" />
+        <ColumnInfo Id="项目" Index="4" />
+        <ColumnInfo Id="总计" Index="5" />
+        <ColumnInfo Id="币种" Index="6" />
+        <ColumnInfo Id="草单编号" Index="7" />
+        <ColumnInfo Id="核准日" Index="8" />
+        <ColumnInfo Id="正式账单" Index="9" />
+      </Columns>
+    </ListView>
+    <DetailView Id="P_2015_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100" Direction="Vertical">
+            <LayoutGroup Id="P_2015" RelativeSize="100" Index="0" Direction="Vertical">
+              <LayoutItem Id="ID" ViewItem="ID" Index="0" RelativeSize="5.8181818181818183" IsNewNode="True" />
+              <LayoutGroup Id="Autoe9951a63-e3f9-4fe2-abf8-cdf5d126c4f6" ShowCaption="False" Caption="Autoe9951a63-e3f9-4fe2-abf8-cdf5d126c4f6(5)" Direction="Horizontal" Index="1" RelativeSize="94.181818181818187" IsNewNode="True">
+                <LayoutGroup Id="P_2015_col1" ShowCaption="False" Index="0" RelativeSize="48.8235294117647" IsNewNode="True">
+                  <LayoutItem Id="记账日期" ViewItem="记账日期" Index="0" RelativeSize="5.7915057915057915" IsNewNode="True" />
+                  <LayoutItem Id="账单号" ViewItem="账单号" Index="1" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="卷号" ViewItem="卷号" Index="2" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="债方" ViewItem="债方" Index="3" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="币种" ViewItem="币种" Index="4" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="项目" ViewItem="项目" Index="5" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="官费" ViewItem="官费" Index="6" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="代理费" ViewItem="代理费" Index="7" RelativeSize="66.409266409266408" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="P_2015_col2" ShowCaption="False" Index="1" RelativeSize="51.1764705882353" IsNewNode="True">
+                  <LayoutItem Id="翻译" ViewItem="翻译" Index="0" RelativeSize="5.7915057915057915" IsNewNode="True" />
+                  <LayoutItem Id="杂费" ViewItem="杂费" Index="1" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="总计" ViewItem="总计" Index="2" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="草单编号" ViewItem="草单编号" Index="3" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="正式账单" ViewItem="正式账单" Index="4" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="核准日" ViewItem="核准日" Index="5" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="备注" ViewItem="备注" Index="6" RelativeSize="71.042471042471036" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="P_2015_col1" RelativeSize="34.8235294117647" Removed="True">
+                <LayoutItem Id="ID" ViewItem="ID" Index="0" RelativeSize="5.8181818181818183" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="记账日期" ViewItem="记账日期" Index="1" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="账单号" ViewItem="账单号" Index="2" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="卷号" ViewItem="卷号" Index="3" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="币种" Index="4" RelativeSize="4.3636363636363633" />
+                <LayoutItem Id="代理费" Index="5" RelativeSize="4.3636363636363633" />
+                <LayoutItem Id="翻译" Index="6" RelativeSize="4.3636363636363633" />
+                <LayoutItem Id="草单编号" Index="7" RelativeSize="4.3636363636363633" />
+                <LayoutItem Id="债方" ViewItem="债方" Index="8" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="核准日" ViewItem="核准日" Index="9" RelativeSize="4.3636363636363633" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="项目" ViewItem="项目" Index="10" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="官费" ViewItem="官费" Index="11" RelativeSize="4.3636363636363633" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="杂费" ViewItem="杂费" Index="12" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="总计" ViewItem="总计" Index="13" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="正式账单" ViewItem="正式账单" Index="14" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="备注" ViewItem="备注" Index="15" RelativeSize="33.090909090909093" IsNewNode="True" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="P_2015_col2" RelativeSize="65.17647058823529" Caption="P_2015_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="记账日期" ViewItem="记账日期" Index="0" RelativeSize="5.8181818181818183" Removed="True" />
+                <LayoutItem Id="项目" ViewItem="项目" Index="0" RelativeSize="5.8181818181818183" Removed="True" />
+                <LayoutItem Id="杂费" ViewItem="杂费" Index="0" RelativeSize="5.8181818181818183" Removed="True" />
+                <LayoutItem Id="债方" ViewItem="债方" Index="0" RelativeSize="5.8181818181818183" Removed="True" />
+                <LayoutItem Id="正式账单" ViewItem="正式账单" Index="0" RelativeSize="5.8181818181818183" Removed="True" />
+                <LayoutItem Id="总计" ViewItem="总计" Index="0" RelativeSize="5.8181818181818183" Removed="True" />
+                <LayoutItem Id="卷号" ViewItem="卷号" Index="2" RelativeSize="4.3636363636363633" Removed="True" />
+                <LayoutItem Id="账单号" ViewItem="账单号" Index="4" RelativeSize="11.538461538461538" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="P_2015_ListView">
+      <Columns>
+        <ColumnInfo Id="备注" Index="-1" />
+        <ColumnInfo Id="代理费" Index="-1" />
+        <ColumnInfo Id="翻译" Index="-1" />
+        <ColumnInfo Id="官费" Index="-1" />
+        <ColumnInfo Id="杂费" Index="-1" />
+        <ColumnInfo Id="记账日期" Index="0" />
+        <ColumnInfo Id="账单号" Index="1" />
+        <ColumnInfo Id="债方" Index="2" />
+        <ColumnInfo Id="卷号" Index="3" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="项目" Index="4" />
+        <ColumnInfo Id="币种" Index="5" />
+        <ColumnInfo Id="总计" Index="6" />
+        <ColumnInfo Id="草单编号" Index="7" />
+        <ColumnInfo Id="核准日" Index="8" />
+        <ColumnInfo Id="正式账单" Index="9" />
+      </Columns>
+    </ListView>
+    <DetailView Id="P_2016_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="P_2016" ShowCaption="True" Index="0" RelativeSize="100" Caption="P_2016" IsNewNode="True">
+            <LayoutItem Id="ID" ViewItem="ID" Index="0" RelativeSize="5.8181818181818183" IsNewNode="True" />
+            <LayoutGroup Id="SimpleEditors" ShowCaption="False" Direction="Horizontal" Index="1" RelativeSize="94.181818181818187" IsNewNode="True">
+              <LayoutGroup Id="P_2016_col1" ShowCaption="False" Index="0" RelativeSize="51.1764705882353" IsNewNode="True">
+                <LayoutItem Id="记账日期" ViewItem="记账日期" Index="0" RelativeSize="5.7915057915057915" IsNewNode="True" />
+                <LayoutItem Id="指定请款日" ViewItem="指定请款日" Index="1" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                <LayoutItem Id="账单号" ViewItem="账单号" Index="2" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                <LayoutItem Id="卷号" ViewItem="卷号" Index="3" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                <LayoutItem Id="债方" ViewItem="债方" Index="4" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                <LayoutItem Id="项目" ViewItem="项目" Index="5" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                <LayoutItem Id="币种" ViewItem="币种" Index="6" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                <LayoutItem Id="官费" ViewItem="官费" Index="7" RelativeSize="66.409266409266408" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="P_2016_col2" ShowCaption="False" Index="1" RelativeSize="48.8235294117647" IsNewNode="True">
+                <LayoutItem Id="代理费" ViewItem="代理费" Index="0" RelativeSize="5.7915057915057915" IsNewNode="True" />
+                <LayoutItem Id="翻译" ViewItem="翻译" Index="1" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                <LayoutItem Id="杂费" ViewItem="杂费" Index="2" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                <LayoutItem Id="总计" ViewItem="总计" Index="3" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                <LayoutItem Id="草单编号" ViewItem="草单编号" Index="4" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                <LayoutItem Id="正式账单" ViewItem="正式账单" Index="5" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                <LayoutItem Id="核准日" ViewItem="核准日" Index="6" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                <LayoutItem Id="备注" ViewItem="备注" Index="7" RelativeSize="66.409266409266408" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors" RelativeSize="34.73861720067454" Direction="Horizontal" Removed="True">
+            <LayoutGroup Id="P_2016_col1" ShowCaption="False" Index="0" RelativeSize="50" IsNewNode="True">
+              <LayoutItem Id="账单号" ViewItem="账单号" Index="0" RelativeSize="15.533980582524272" IsNewNode="True" />
+              <LayoutItem Id="卷号" ViewItem="卷号" Index="1" RelativeSize="11.650485436893204" IsNewNode="True" />
+              <LayoutItem Id="币种" ViewItem="币种" Index="2" RelativeSize="11.650485436893204" IsNewNode="True" />
+              <LayoutItem Id="代理费" ViewItem="代理费" Index="3" RelativeSize="11.650485436893204" IsNewNode="True" />
+              <LayoutItem Id="翻译" ViewItem="翻译" Index="4" RelativeSize="11.650485436893204" IsNewNode="True" />
+              <LayoutItem Id="草单编号" ViewItem="草单编号" Index="5" RelativeSize="11.650485436893204" IsNewNode="True" />
+              <LayoutItem Id="核准日" ViewItem="核准日" Index="6" RelativeSize="11.650485436893204" IsNewNode="True" />
+              <LayoutItem Id="备注" ViewItem="备注" Index="7" RelativeSize="14.563106796116506" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="P_2016_col2" ShowCaption="False" Index="1" RelativeSize="50" IsNewNode="True">
+              <LayoutItem Id="记账日期" ViewItem="记账日期" Index="0" RelativeSize="15.533980582524272" IsNewNode="True" />
+              <LayoutItem Id="债方" ViewItem="债方" Index="1" RelativeSize="11.650485436893204" IsNewNode="True" />
+              <LayoutItem Id="项目" ViewItem="项目" Index="2" RelativeSize="11.650485436893204" IsNewNode="True" />
+              <LayoutItem Id="官费" ViewItem="官费" Index="3" RelativeSize="11.650485436893204" IsNewNode="True" />
+              <LayoutItem Id="杂费" ViewItem="杂费" Index="4" RelativeSize="11.650485436893204" IsNewNode="True" />
+              <LayoutItem Id="总计" ViewItem="总计" Index="5" RelativeSize="11.650485436893204" IsNewNode="True" />
+              <LayoutItem Id="正式账单" ViewItem="正式账单" Index="6" RelativeSize="11.650485436893204" IsNewNode="True" />
+              <LayoutItem Id="指定请款日" ViewItem="指定请款日" Index="7" RelativeSize="14.563106796116506" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="P_2016" RelativeSize="50" Direction="Vertical" Removed="True">
+              <LayoutItem Id="ID" ViewItem="ID" Index="0" RelativeSize="100" IsNewNode="True" />
+              <LayoutGroup Id="P_2016_col1" ShowCaption="False" Index="0" RelativeSize="100" Removed="True">
+                <LayoutItem Id="账单号" ViewItem="账单号" Index="0" RelativeSize="5.8181818181818183" IsNewNode="True" />
+                <LayoutItem Id="卷号" ViewItem="卷号" Index="1" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="币种" ViewItem="币种" Index="2" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="代理费" ViewItem="代理费" Index="3" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="翻译" ViewItem="翻译" Index="4" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="草单编号" ViewItem="草单编号" Index="5" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="核准日" ViewItem="核准日" Index="6" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="备注" ViewItem="备注" Index="7" RelativeSize="68" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="P_2016_col2" RelativeSize="32.057416267942585" Removed="True">
+                <LayoutItem Id="记账日期" ViewItem="记账日期" Index="0" RelativeSize="5.8181818181818183" IsNewNode="True" />
+                <LayoutItem Id="债方" Index="1" RelativeSize="4.3636363636363633" />
+                <LayoutItem Id="卷号" Index="2" RelativeSize="4.3636363636363633" Removed="True" />
+                <LayoutItem Id="项目" Index="2" RelativeSize="4.3636363636363633" />
+                <LayoutItem Id="官费" ViewItem="官费" Index="3" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="杂费" Index="4" RelativeSize="4.3636363636363633" />
+                <LayoutItem Id="账单号" Index="5" RelativeSize="4.3636363636363633" Removed="True" />
+                <LayoutItem Id="总计" Index="5" RelativeSize="4.3636363636363633" />
+                <LayoutItem Id="正式账单" Index="6" RelativeSize="4.3636363636363633" />
+                <LayoutItem Id="指定请款日" Index="7" RelativeSize="68" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="P_2016_ListView">
+      <Columns>
+        <ColumnInfo Id="备注" Index="-1" />
+        <ColumnInfo Id="代理费" Index="-1" />
+        <ColumnInfo Id="翻译" Index="-1" />
+        <ColumnInfo Id="官费" Index="-1" />
+        <ColumnInfo Id="杂费" Index="-1" />
+        <ColumnInfo Id="记账日期" Index="0" />
+        <ColumnInfo Id="账单号" Index="1" />
+        <ColumnInfo Id="债方" Index="2" />
+        <ColumnInfo Id="卷号" Index="3" />
+        <ColumnInfo Id="项目" Index="4" />
+        <ColumnInfo Id="总计" Index="5" />
+        <ColumnInfo Id="币种" Index="6" />
+        <ColumnInfo Id="草单编号" Index="7" />
+        <ColumnInfo Id="核准日" Index="8" />
+        <ColumnInfo Id="正式账单" Index="9" />
+        <ColumnInfo Id="指定请款日" Index="10" />
+      </Columns>
+    </ListView>
+    <DetailView Id="P_2017_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="P_2017" RelativeSize="100" Direction="Vertical">
+              <LayoutItem Id="ID" ViewItem="ID" Index="0" RelativeSize="5.8181818181818183" IsNewNode="True" />
+              <LayoutGroup Id="P_2017_col1" ShowCaption="False" Index="0" RelativeSize="50" Removed="True">
+                <LayoutItem Id="ID" ViewItem="ID" Index="0" RelativeSize="5.8181818181818183" IsNewNode="True" />
+                <LayoutItem Id="记账日期" ViewItem="记账日期" Index="1" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="指定请款日" ViewItem="指定请款日" Index="2" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="账单号" ViewItem="账单号" Index="3" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="卷号" ViewItem="卷号" Index="4" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="债方" ViewItem="债方" Index="5" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="项目" ViewItem="项目" Index="6" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="币种" ViewItem="币种" Index="7" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="官费" ViewItem="官费" Index="8" RelativeSize="4.3636363636363633" IsNewNode="True" />
+                <LayoutItem Id="服务费" ViewItem="服务费" Index="9" RelativeSize="59.272727272727273" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto96eb8570-b081-48a4-8220-324f87e4aaae" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="94.181818181818187" IsNewNode="True">
+                <LayoutGroup Id="P_2017_col1" ShowCaption="False" Index="0" RelativeSize="50" IsNewNode="True">
+                  <LayoutItem Id="记账日期" ViewItem="记账日期" Index="0" RelativeSize="5.7915057915057915" IsNewNode="True" />
+                  <LayoutItem Id="指定请款日" ViewItem="指定请款日" Index="1" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="账单号" ViewItem="账单号" Index="2" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="卷号" ViewItem="卷号" Index="3" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="债方" ViewItem="债方" Index="4" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="项目" ViewItem="项目" Index="5" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="币种" ViewItem="币种" Index="6" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="官费" ViewItem="官费" Index="7" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="服务费" ViewItem="服务费" Index="8" RelativeSize="61.776061776061773" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="P_2017_col2" ShowCaption="False" Index="1" RelativeSize="50" IsNewNode="True">
+                  <LayoutItem Id="代理费" ViewItem="代理费" Index="0" RelativeSize="5.7915057915057915" IsNewNode="True" />
+                  <LayoutItem Id="小时数" ViewItem="小时数" Index="1" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="翻译" ViewItem="翻译" Index="2" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="杂费" ViewItem="杂费" Index="3" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="总计" ViewItem="总计" Index="4" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="草单编号" ViewItem="草单编号" Index="5" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="正式账单" ViewItem="正式账单" Index="6" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="核准日" ViewItem="核准日" Index="7" RelativeSize="4.6332046332046328" IsNewNode="True" />
+                  <LayoutItem Id="备注" ViewItem="备注" Index="8" RelativeSize="61.776061776061773" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="P_2017_col2" RelativeSize="50" Caption="P_2017_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="项目" Index="0" RelativeSize="5.8181818181818183" Removed="True" />
+                <LayoutItem Id="杂费" Index="0" RelativeSize="5.8181818181818183" Removed="True" />
+                <LayoutItem Id="债方" Index="0" RelativeSize="5.8181818181818183" Removed="True" />
+                <LayoutItem Id="正式账单" RelativeSize="5.8181818181818183" Index="0" Removed="True" />
+                <LayoutItem Id="指定请款日" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="总计" RelativeSize="5.8181818181818183" Index="0" Removed="True" />
+                <LayoutItem Id="账单号" Index="1" RelativeSize="4.3636363636363633" Removed="True" />
+                <LayoutItem Id="卷号" Index="2" RelativeSize="4.3636363636363633" Removed="True" />
+                <LayoutItem Id="小时数" Index="6" RelativeSize="4.3636363636363633" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="P_2017_ListView" Criteria="" PreviewColumnName="">
+      <Columns>
+        <ColumnInfo Id="备注" Index="-1" />
+        <ColumnInfo Id="代理费" Index="-1" />
+        <ColumnInfo Id="翻译" Index="-1" />
+        <ColumnInfo Id="服务费" Index="-1" />
+        <ColumnInfo Id="官费" Index="-1" />
+        <ColumnInfo Id="小时数" Index="-1" />
+        <ColumnInfo Id="杂费" Index="-1" />
+        <ColumnInfo Id="记账日期" Index="0" />
+        <ColumnInfo Id="账单号" Index="1" />
+        <ColumnInfo Id="债方" Index="2" />
+        <ColumnInfo Id="卷号" Index="3" />
+        <ColumnInfo Id="项目" Index="4" />
+        <ColumnInfo Id="总计" Index="5" />
+        <ColumnInfo Id="币种" Index="6" />
+        <ColumnInfo Id="草单编号" Index="7" />
+        <ColumnInfo Id="核准日" Index="8" />
+        <ColumnInfo Id="正式账单" Index="9" />
+        <ColumnInfo Id="指定请款日" Index="10" />
+      </Columns>
+    </ListView>
   </Views>
 </Application>

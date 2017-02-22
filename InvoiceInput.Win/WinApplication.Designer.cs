@@ -27,6 +27,7 @@
             this.module2 = new DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule();
             this.module3 = new InvoiceInput.Module.InvoiceInputModule();
             this.module4 = new InvoiceInput.Module.Win.InvoiceInputWindowsFormsModule();
+            this.invoiceInputModule1 = new InvoiceInput.Module.InvoiceInputModule();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // InvoiceInputWindowsFormsApplication
@@ -40,7 +41,6 @@
             this.UseOldTemplates = false;
             this.DatabaseVersionMismatch += new System.EventHandler<DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs>(this.InvoiceInputWindowsFormsApplication_DatabaseVersionMismatch);
             this.CustomizeLanguagesList += new System.EventHandler<DevExpress.ExpressApp.CustomizeLanguagesListEventArgs>(this.InvoiceInputWindowsFormsApplication_CustomizeLanguagesList);
-
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -51,5 +51,6 @@
         private DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule module2;
         private InvoiceInput.Module.InvoiceInputModule module3;
         private InvoiceInput.Module.Win.InvoiceInputWindowsFormsModule module4;
+        private Module.InvoiceInputModule invoiceInputModule1;
     }
 }

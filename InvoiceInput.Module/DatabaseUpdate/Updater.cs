@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using DevExpress.ExpressApp;
 using DevExpress.Data.Filtering;
 using DevExpress.Persistent.Base;

@@ -1,5 +1,21 @@
-﻿<Application Logo="ExpressAppLogo">
-	<Options Skin="Visual Studio 2013 Blue" UIType="TabbedMDI" FormStyle="Ribbon">
-	  <RibbonOptions RibbonControlStyle="Office2013" />
-	</Options>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Logo="BO_Contract">
+  <NavigationItems DefaultChildItemsDisplayStyle="List" RootGroupsStyle="OutlookSimple" NavigationStyle="TreeList" />
+  <Options Skin="Visual Studio 2013 Blue" UIType="MultipleWindowSDI" FormStyle="Standard" />
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="16.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="16.2.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <ViewItems>
+    <PropertyEditor Name="PropertyEditors">
+      <RegisteredPropertyEditor PropertyType="System.String" EditorType="InvoiceInput.Module.Win.Editors.MRUStringEditor" />
+    </PropertyEditor>
+  </ViewItems>
+  <Views>
+    <DetailView Id="P_2012_DetailView">
+      <HiddenActions>
+        <ActionLink ActionId="OpenObject" IsNewNode="True" />
+      </HiddenActions>
+    </DetailView>
+  </Views>
 </Application>
